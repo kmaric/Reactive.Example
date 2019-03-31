@@ -1,0 +1,75 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Processor/Reactive.Example.Processor.csproj",
+    "projectName": "Reactive.Example.Processor",
+    "projectPath": "/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Processor/Reactive.Example.Processor.csproj",
+    "outputPath": "/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Processor/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/Reactive.Example.Common.csproj": {
+            "projectPath": "/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/Reactive.Example.Common.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.AspNetCore": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.App": {
+          "target": "Package",
+          "version": "[2.2.3, )"
+        },
+        "Microsoft.AspNetCore.Hosting": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Hosting.Server.Abstractions": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Configuration": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Configuration.Abstractions": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "RabbitMQ.Client": {
+          "target": "Package",
+          "version": "[5.1.0, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
