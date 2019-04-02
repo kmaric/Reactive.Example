@@ -33,6 +33,10 @@
         <e p="Config" t="Include">
           <e p="RabbitMqModel.cs" t="Include" />
         </e>
+        <e p="extensions" t="Include">
+          <e p="RabbitBuilderExtensions.cs" t="Include" />
+        </e>
+        <e p="Interfaces" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -42,6 +46,7 @@
         </e>
         <e p="Reactive.Example.Common.csproj" t="IncludeRecursive" />
         <e p="Services" t="Include">
+          <e p="IRabbitListener.cs" t="Include" />
           <e p="RabbitMqService.cs" t="Include" />
         </e>
       </e>
@@ -49,6 +54,9 @@
         <e p="Application.cs" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Listeners" t="Include">
+          <e p="HttpTestListener.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

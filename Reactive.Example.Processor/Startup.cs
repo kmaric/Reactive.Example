@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Reactive.Example.Common.Config;
+using Reactive.Example.Common.Extensions;
 using Reactive.Example.Common.Services;
+using Reactive.Example.Processor.Listeners;
 
 namespace Reactive.Example.Processor
 {
@@ -21,10 +23,12 @@ namespace Reactive.Example.Processor
         {            
             services.AddHostedService<Application>();
             services.AddOptions();
+            
+            services.Configure<RabbitMqModel>(_configuration.GetSection("RabbitMQ"));
 
             services.AddSingleton<RabbitMqService>();
-
-            services.Configure<RabbitMqModel>(_configuration.GetSection("RabbitMQ"));
+            services.AddSingleton<HttpTestListener>();
+            
             
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
@@ -45,6 +49,7 @@ namespace Reactive.Example.Processor
             applicationLifetime.ApplicationStarted.Register(StartClient);
 
             app.UseCors("CorsPolicy");
+            app.UseRabbitListener<HttpTestListener>();
 
 //            app.UseSignalR(route =>
 //            {

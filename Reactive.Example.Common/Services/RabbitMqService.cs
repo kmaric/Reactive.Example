@@ -71,6 +71,7 @@ namespace Reactive.Example.Common.Services
                 autoDelete: false,
                 arguments: null
             );
+            
             channel.BasicQos(0, 10, true);
 
             return channel;
