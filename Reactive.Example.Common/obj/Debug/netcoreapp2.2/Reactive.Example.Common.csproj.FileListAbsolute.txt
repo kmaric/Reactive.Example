@@ -1,9 +1,0 @@
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/bin/Debug/netcoreapp2.2/Reactive.Example.Common.deps.json
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/bin/Debug/netcoreapp2.2/Reactive.Example.Common.dll
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/bin/Debug/netcoreapp2.2/Reactive.Example.Common.pdb
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/obj/Debug/netcoreapp2.2/Reactive.Example.Common.csprojAssemblyReference.cache
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/obj/Debug/netcoreapp2.2/Reactive.Example.Common.csproj.CoreCompileInputs.cache
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/obj/Debug/netcoreapp2.2/Reactive.Example.Common.AssemblyInfoInputs.cache
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/obj/Debug/netcoreapp2.2/Reactive.Example.Common.AssemblyInfo.cs
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/obj/Debug/netcoreapp2.2/Reactive.Example.Common.dll
-/Users/kmaric/Projects/examples/Reactive.Example/Reactive.Example.Common/obj/Debug/netcoreapp2.2/Reactive.Example.Common.pdb
