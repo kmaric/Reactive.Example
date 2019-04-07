@@ -4,6 +4,6 @@ namespace Reactive.Example.Common.Interfaces
 {
     public interface IRabbitMqService
     {
-        IModel CreateListener(string queue, bool durable = false);
+        IModel CreateListener(string queue, bool durable = false, ushort prefetch = 10);
     }
 }

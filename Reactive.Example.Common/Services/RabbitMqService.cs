@@ -62,7 +62,7 @@ namespace Reactive.Example.Common.Services
 
         }
 
-        public IModel CreateListener(string queue, bool durable = false)
+        public IModel CreateListener(string queue, bool durable = false, ushort prefetch = 10)
         {
             var channel = _rabbitConnection.CreateModel();
             channel.QueueDeclare(
@@ -73,7 +73,7 @@ namespace Reactive.Example.Common.Services
                 arguments: null
             );
             
-            channel.BasicQos(0, 10, true);
+            channel.BasicQos(0, prefetch, true);
 
             return channel;
         }
