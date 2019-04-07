@@ -35,6 +35,7 @@ namespace Reactive.Example.Processor
                 {
                     // Configure the app here.
                 })
+                .UseUrls("http://0.0.0.0:8091")
                 .UseStartup<Startup>();
 
     }

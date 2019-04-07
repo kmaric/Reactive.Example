@@ -8,7 +8,7 @@ namespace Reactive.Example.Processor
 {
     public class Application: IHostedService
     {
-        public Application(RabbitMqService rabbitMqService)
+        public Application()
         {
             
         }

@@ -4,10 +4,11 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using Reactive.Example.Common.Config;
+using Reactive.Example.Common.Interfaces;
 
 namespace Reactive.Example.Common.Services
 {
-    public class RabbitMqService
+    public class RabbitMqService: IRabbitMqService
     {
         private readonly RabbitMqModel _settings;
         private Task Initialization;

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive.Example", "Reactive.Example\Reactive.Example.csproj", "{93473F4C-13BA-4E8C-B6FA-B94017B7554C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive.Example.API", "Reactive.Example.API\Reactive.Example.API.csproj", "{93473F4C-13BA-4E8C-B6FA-B94017B7554C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive.Example.Processor", "Reactive.Example.Processor\Reactive.Example.Processor.csproj", "{25881FA5-E1B8-4AA4-A30D-28C37C0FD80C}"
 EndProject

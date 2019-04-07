@@ -8,11 +8,11 @@ namespace Reactive.Example.Processor.Listeners
 {
     public class HttpTestListener: IRabbitListener
     {
-        private readonly RabbitMqService _rabbitMqService;
+        private readonly IRabbitMqService _rabbitMqService;
         private IModel Listener;
         private const string Queue = "http-test-queue";
         
-        public HttpTestListener(RabbitMqService rabbitMqService)
+        public HttpTestListener(IRabbitMqService rabbitMqService)
         {
             _rabbitMqService = rabbitMqService;
         }

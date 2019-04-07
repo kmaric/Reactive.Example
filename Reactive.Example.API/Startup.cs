@@ -10,6 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Reactive.Example.Common.Config;
+using Reactive.Example.Common.Extensions;
+using Reactive.Example.Common.Interfaces;
+using Reactive.Example.Common.Services;
 
 namespace Reactive.Example
 {
@@ -26,6 +30,8 @@ namespace Reactive.Example
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.Configure<RabbitMqModel>(Configuration.GetSection("RabbitMQ"));
+            services.AddSingleton<IRabbitMqService, RabbitMqService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +47,7 @@ namespace Reactive.Example
                 app.UseHsts();
             }
 
+            app.UseRabbitConnection();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

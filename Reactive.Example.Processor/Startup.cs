@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Reactive.Example.Common.Config;
 using Reactive.Example.Common.Extensions;
+using Reactive.Example.Common.Interfaces;
 using Reactive.Example.Common.Services;
 using Reactive.Example.Processor.Listeners;
 
@@ -26,7 +27,7 @@ namespace Reactive.Example.Processor
             
             services.Configure<RabbitMqModel>(_configuration.GetSection("RabbitMQ"));
 
-            services.AddSingleton<RabbitMqService>();
+            services.AddSingleton<IRabbitMqService, RabbitMqService>();
             services.AddSingleton<HttpTestListener>();
             
             
@@ -49,6 +50,7 @@ namespace Reactive.Example.Processor
             applicationLifetime.ApplicationStarted.Register(StartClient);
 
             app.UseCors("CorsPolicy");
+            app.UseRabbitConnection();
             app.UseRabbitListener<HttpTestListener>();
 
 //            app.UseSignalR(route =>
