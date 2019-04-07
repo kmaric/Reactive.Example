@@ -1,4 +1,4 @@
-namespace Reactive.Example.Common.Services
+namespace Reactive.Example.Common.Interfaces
 {
     public interface IRabbitListener
     {

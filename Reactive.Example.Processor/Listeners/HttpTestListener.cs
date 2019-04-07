@@ -1,6 +1,7 @@
 using System;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using Reactive.Example.Common.Interfaces;
 using Reactive.Example.Common.Services;
 
 namespace Reactive.Example.Processor.Listeners

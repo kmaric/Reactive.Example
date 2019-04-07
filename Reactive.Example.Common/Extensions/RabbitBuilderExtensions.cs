@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Reactive.Example.Common.Interfaces;
 using Reactive.Example.Common.Services;
 
 namespace Reactive.Example.Common.Extensions
