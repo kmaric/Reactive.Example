@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive.Example.Processor"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive.Example.Common", "Reactive.Example.Common\Reactive.Example.Common.csproj", "{C5F88CB8-BCE6-46B7-8BDC-E8F1EF9ED60C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive.Example.DAL", "Reactive.Example.DAL\Reactive.Example.DAL.csproj", "{BC71628F-7E6F-423E-B64F-81623B22167C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{C5F88CB8-BCE6-46B7-8BDC-E8F1EF9ED60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5F88CB8-BCE6-46B7-8BDC-E8F1EF9ED60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5F88CB8-BCE6-46B7-8BDC-E8F1EF9ED60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC71628F-7E6F-423E-B64F-81623B22167C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC71628F-7E6F-423E-B64F-81623B22167C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC71628F-7E6F-423E-B64F-81623B22167C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC71628F-7E6F-423E-B64F-81623B22167C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

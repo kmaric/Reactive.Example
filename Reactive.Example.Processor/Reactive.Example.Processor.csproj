@@ -18,10 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Reactive.Example.Common\Reactive.Example.Common.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Services" />
+      <ProjectReference Include="..\Reactive.Example.DAL\Reactive.Example.DAL.csproj" />
     </ItemGroup>
 
     <ItemGroup>

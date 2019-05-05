@@ -6,8 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Reactive.Example.Common.Config;
 using Reactive.Example.Common.Extensions;
 using Reactive.Example.Common.Interfaces;
+using Reactive.Example.Common.Interfaces.DAL;
 using Reactive.Example.Common.Services;
+using Reactive.Example.DAL.Repositories;
 using Reactive.Example.Processor.Listeners;
+using Reactive.Example.Processor.Services;
 
 namespace Reactive.Example.Processor
 {
@@ -29,7 +32,8 @@ namespace Reactive.Example.Processor
 
             services.AddSingleton<IRabbitMqService, RabbitMqService>();
             services.AddSingleton<HttpTestListener>();
-            
+            services.AddSingleton<ITestRepository, TestRepository>();
+            services.AddHostedService<TaskRunnerService>();
             
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
@@ -52,7 +56,7 @@ namespace Reactive.Example.Processor
             app.UseCors("CorsPolicy");
             app.UseRabbitConnection();
             app.UseRabbitListener<HttpTestListener>();
-
+            
 //            app.UseSignalR(route =>
 //            {
 //                route.MapHub<DeviceHub>("/hubs/device");
