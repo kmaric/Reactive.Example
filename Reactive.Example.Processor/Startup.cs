@@ -32,7 +32,7 @@ namespace Reactive.Example.Processor
 
             services.AddSingleton<IRabbitMqService, RabbitMqService>();
             services.AddSingleton<HttpTestListener>();
-            services.AddSingleton<ITestRepository, TestRepository>();
+            services.AddSingleton<ITestRepository, TestRepositoryDapper>();
             services.AddHostedService<TaskRunnerService>();
             
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>

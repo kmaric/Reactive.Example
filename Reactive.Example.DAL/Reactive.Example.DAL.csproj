@@ -8,4 +8,9 @@
       <ProjectReference Include="..\Reactive.Example.Common\Reactive.Example.Common.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="1.60.6" />
+      <PackageReference Include="SQLite" Version="3.13.0" />
+    </ItemGroup>
+
 </Project>
