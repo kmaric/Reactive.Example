@@ -44,7 +44,9 @@ namespace Reactive.Example.Migrations
                     // Set the connection string
                     .WithGlobalConnectionString(Configuration.GetConnectionString("Sqlite"))
                     // Define the assembly containing the migrations
-                    .ScanIn(typeof(SQLiteInitialization).Assembly).For.Migrations())
+                    .ScanIn(typeof(SQLiteInitialization).Assembly).For.Migrations()
+                    .ScanIn(typeof(AddTimestampToCatalogue).Assembly).For.Migrations()
+                )
                 // Enable logging to console in the FluentMigrator way
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 // Build the service provider
