@@ -34,6 +34,7 @@ namespace Reactive.Example.Processor
             services.AddSingleton<HttpTestListener>();
             services.AddSingleton<ITestRepository, TestRepositoryDapper>();
             services.AddHostedService<TaskRunnerService>();
+            services.AddHostedService<TaskRunnerServiceAlternative>();
             
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {

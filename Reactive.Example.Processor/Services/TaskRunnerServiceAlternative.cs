@@ -7,11 +7,11 @@ using Reactive.Example.Common.Interfaces.DAL;
 
 namespace Reactive.Example.Processor.Services
 {
-    public class TaskRunnerService: IHostedService
+    public class TaskRunnerServiceAlternative: IHostedService
     {
         private readonly ITestRepository _testRepository;
         private System.Timers.Timer _timer;
-        public TaskRunnerService(ITestRepository testRepository)
+        public TaskRunnerServiceAlternative(ITestRepository testRepository)
         {
             _testRepository = testRepository;
         }
