@@ -34,7 +34,9 @@ namespace Reactive.Example.Processor.Services
         {
             var x = new Random().Next();
             var y = new Random().Next();
-            await _testRepository.Insert(x, y);
+//            await _testRepository.Insert(x, y);
+
+            await _testRepository.GetTopCatalogues();
         }
     }
 }

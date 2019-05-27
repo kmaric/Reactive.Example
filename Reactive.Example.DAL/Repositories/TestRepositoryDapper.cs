@@ -1,11 +1,11 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
+using Reactive.Example.Common.Entities;
 using Reactive.Example.Common.Interfaces.DAL;
 
 namespace Reactive.Example.DAL.Repositories
@@ -37,6 +37,11 @@ namespace Reactive.Example.DAL.Repositories
                 Console.WriteLine(e);
                 throw;
             }
+        }
+
+        public Task<List<Catalogue>> GetTopCatalogues(int limit = 10)
+        {
+            throw new NotImplementedException();
         }
     }
 }

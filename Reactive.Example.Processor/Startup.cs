@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Reactive.Example.Common.Config;
@@ -30,9 +31,12 @@ namespace Reactive.Example.Processor
             
             services.Configure<RabbitMqModel>(_configuration.GetSection("RabbitMQ"));
 
+            services.AddEntityFrameworkSqlite().AddDbContext<TestContext>();
+            
             services.AddSingleton<IRabbitMqService, RabbitMqService>();
             services.AddSingleton<HttpTestListener>();
-            services.AddSingleton<ITestRepository, TestRepositoryDapper>();
+//            services.AddSingleton<ITestRepository, TestRepositoryDapper>();
+            services.AddSingleton<ITestRepository, TestRepositoryEF>();
             services.AddHostedService<TaskRunnerService>();
             services.AddHostedService<TaskRunnerServiceAlternative>();
             
@@ -44,6 +48,7 @@ namespace Reactive.Example.Processor
                     .AllowAnyHeader()
                     .AllowCredentials();
             }));
+
 //            services.AddSignalR();
 
             return services.BuildServiceProvider();
@@ -55,8 +60,8 @@ namespace Reactive.Example.Processor
             applicationLifetime.ApplicationStarted.Register(StartClient);
 
             app.UseCors("CorsPolicy");
-            app.UseRabbitConnection();
-            app.UseRabbitListener<HttpTestListener>();
+//            app.UseRabbitConnection();
+//            app.UseRabbitListener<HttpTestListener>();
             
 //            app.UseSignalR(route =>
 //            {
