@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <PackageReference Include="Dapper" Version="1.60.6" />
+      <PackageReference Include="LiteDB" Version="4.1.4" />
       <PackageReference Include="Microsoft.Data.Sqlite" Version="2.2.4" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="2.2.4" />
 <!--      <PackageReference Include="Microsoft.Data.Sqlite" Version="3.0.0-preview4.19216.3" />-->

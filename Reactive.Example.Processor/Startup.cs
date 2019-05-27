@@ -33,10 +33,12 @@ namespace Reactive.Example.Processor
 
             services.AddEntityFrameworkSqlite().AddDbContext<TestContext>();
             
+            
             services.AddSingleton<IRabbitMqService, RabbitMqService>();
             services.AddSingleton<HttpTestListener>();
 //            services.AddSingleton<ITestRepository, TestRepositoryDapper>();
-            services.AddSingleton<ITestRepository, TestRepositoryEF>();
+//            services.AddSingleton<ITestRepository, TestRepositoryEF>();
+            services.AddSingleton<ITestRepository, TestRepositoryLiteDb>();
             services.AddHostedService<TaskRunnerService>();
             services.AddHostedService<TaskRunnerServiceAlternative>();
             
